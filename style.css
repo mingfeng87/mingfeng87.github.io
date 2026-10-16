@@ -1,0 +1,98 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, "Segoe UI", "Helvetica Neue", "PingFang SC", Arial, sans-serif;
+  line-height: 1.7;
+  color: #2c3e50;
+  background: #fdfdfd;
+}
+
+a { color: #0366d6; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 导航 */
+nav {
+  border-bottom: 1px solid #eaecef;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+nav .brand { font-weight: 600; font-size: 1.05em; }
+nav ul { list-style: none; display: flex; gap: 24px; }
+nav ul a { color: #2c3e50; font-size: 0.95em; }
+nav ul a.active { color: #0366d6; font-weight: 600; }
+
+/* 头部 */
+header.profile {
+  padding: 56px 0 32px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header.profile img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #eaecef;
+}
+header.profile .info h1 { font-size: 1.9em; margin-bottom: 6px; }
+header.profile .info p { color: #586069; margin-bottom: 4px; }
+header.profile .links { margin-top: 12px; display: flex; gap: 16px; flex-wrap: wrap; }
+header.profile .links a { font-size: 0.92em; }
+
+/* 区块 */
+section { padding: 24px 0; }
+section h2 {
+  font-size: 1.25em;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+
+/* 列表 */
+ul.item-list { list-style: none; }
+ul.item-list li {
+  padding: 12px 0;
+  border-bottom: 1px dashed #eaecef;
+}
+ul.item-list li:last-child { border-bottom: none; }
+ul.item-list .title { font-weight: 600; }
+ul.item-list .meta { color: #586069; font-size: 0.92em; }
+ul.item-list .desc { font-size: 0.95em; margin-top: 4px; }
+
+/* 文件下载 */
+.file-list { list-style: none; }
+.file-list li { padding: 8px 0; }
+.file-list li::before { content: "📄 "; }
+
+/* 页脚 */
+footer {
+  margin-top: 48px;
+  padding: 24px 0;
+  border-top: 1px solid #eaecef;
+  text-align: center;
+  font-size: 0.88em;
+  color: #586069;
+}
+
+@media (max-width: 600px) {
+  header.profile { justify-content: center; text-align: center; }
+  header.profile .links { justify-content: center; }
+  nav ul { gap: 14px; }
+  nav ul a { font-size: 0.88em; }
+}
